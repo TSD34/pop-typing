@@ -1,0 +1,21 @@
+(function(){
+'use strict';
+var twf = document.getElementsByClassName('twf');
+var ww=twf[0].dataset.width;
+var hh=twf[0].dataset.height;
+twf[0].style.display = 'none';
+
+var iframe = document.createElement('iframe');
+iframe.scrolling = 'yes';
+iframe.frameBorder = 0;
+iframe.marginWidth = 0;
+iframe.marginHeight = 0;
+iframe.width = ww;
+iframe.height = hh;
+iframe.style="background:#ddd; border-radius: 0px; border: 1px #ddd solid;";
+iframe.id = 'tw-widget';
+iframe.src='http://webglx0.net/tw/getjson.php';
+
+twf[0].parentNode.insertBefore(iframe,twf[0]);
+
+})();
